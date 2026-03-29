@@ -1,0 +1,3 @@
+GET https://api.jikan.moe/anime?q=Naruto&limit=5
+# const searchQuery = 'Naruto';
+# const requestUrl = `${API_BASE_URL}/anime?q=${searchQuery}&limit=5`;

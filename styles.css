@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    border-bottom:2px solid black;
+}
+.brand-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+header ul{
+list-style-type:none;
+display: inline-flex;
+padding: 20px;
+}
+header ul li{
+    padding-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-size:20px;
+    transition:0.2s ease-in-out;
+    font-weight:900;
+}
+header ul li a:hover{
+    color: green;
+    border-bottom:3px solid green;
+    
+}
+header button{
+width:200px;
+height: 40px;
+background: rgb(77, 241, 77);
+border-radius:18px;
+border: none;
+font-weight:800;
+opacity: 0.9;
+cursor: pointer;
+transition: 0.2s ease-in;
+}
+header button:hover{
+    background: rgb(14, 211, 14);
+    opacity:9;
+}
+
+
+
+/* Parent  */
+main{
+ /* margin-left:15%; */
+}
+.parent{
+} 
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+input{
+    width:500px;
+    height:52px;
+    margin-top: 4%;
+    border: none;
+    border-radius:5px;
+    filter: drop-shadow(4px 4px 8px gray);
+    padding-left: 40px;
+     font-size: 20px;
+      border-radius:20px;
+          outline: none;
+    outline-style:none;
+    border: none;
+    position: relative;
+}
+input:focus{
+    outline: none;
+    outline-style:none;
+    border: none;
+}
+.search button{
+    top:27.4px;
+    left:-150px;
+    z-index:1;
+    width: 150px;
+    height:50px;
+    background: gray;
+    border: none;
+    border-radius:20px;
+    position:relative;
+    color:white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/* Movie_Poster_card */
+.movies{
+    display: grid;
+    grid-template-columns:300px 300px 300px;
+    justify-content:space-evenly;
+}
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    margin-top: 50px;
+    width:300px;
+    height:360px;
+    background:lightgrey;
+   filter: drop-shadow(4px 4px 8px #ccc);
+   /* display:none; */
+}
+.movie-card img{
+    width:299px;
+    height:200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+}
+.movie-card h2{
+    text-align: center;
+    font-size:25px;
+    padding-top: 20px;
+}
+.movie-card p{
+    text-align: center;
+    padding: 15px;
+    /* font-size:17px; */
+    /* font-weight:600; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.movie-card button {
+    width:150px;
+    height:30px;
+    font-size:15px;
+    border-bottom:50%;
+    border: none;
+    background: rgb(14, 211, 14);
+    color: white;
+    border-radius:5px;
+    cursor: pointer;
+}
+.elements{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+}
+span{
+    font-size: 20px;
+    cursor: pointer;
+}
+.rotate{
+    position: absolute;
+    top:50%;
+    left:40%;
+    width:70px;
+    height:70px;
+    border-bottom: 5px solid blue;
+    border-radius: 100px;
+    /* border: 2px solid black; */
+    animation: spin 1s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    from{
+        rotate: 0deg;
+    }to{
+        rotate: 360deg;
+    }
+}
