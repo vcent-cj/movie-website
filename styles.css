@@ -148,7 +148,14 @@ input:focus{
     /* font-weight:600; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.movie-card button {
+
+.elements{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+}
+ button {
     width:150px;
     height:30px;
     font-size:15px;
@@ -158,12 +165,7 @@ input:focus{
     color: white;
     border-radius:5px;
     cursor: pointer;
-}
-.elements{
-    display: flex;
-    flex-direction: row;
-    gap:20px;
-    justify-content: center;
+    margin-left: 40px;
 }
 span{
     font-size: 20px;

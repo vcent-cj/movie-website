@@ -26,10 +26,10 @@ var uservalue = userinput.value;  // get the value
                 const image = document.createElement("img");
 
                 // Creating a new div
-                var elements= document.createElement("elements");
+                var elements= document.createElement("div");
                   var button= document.createElement("button");
                     var span1= document.createElement("span");
-                      var span2= document.createElement("s");
+                      var span2= document.createElement("span");
 
                
 
@@ -39,23 +39,24 @@ var uservalue = userinput.value;  // get the value
                 paragraph.textContent = movie.Year;
                 image.src = movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"; // Handle missing posters
 
+                //   Configuring the element
+               elements.classList.add(".elements")
+              button.textContent="Watch";
+              span1.textContent= "❤️"
+              span2.textContent="👍"
+              elements.appendChild(button)
+              elements.appendChild(span1)
+                elements.appendChild(span2)
+
                 // 3. Assemble the card
                 movieCard.appendChild(image);
                 movieCard.appendChild(heading);
                 movieCard.appendChild(paragraph);
+                movieCard.appendChild(elements);
 
                 // 4. Add the finished card to the page
                 moviesContainer.appendChild(movieCard);
-                     //   Configuring the element
-                    elements.classList.add(".elements")
-                   button.textContent="Watch";
-                   span1.textContent= "❤️"
-                   span2.textContent="👍"
                    
-                   elements.appendChild(button)
-                   elements.appendChild(span1)
-                     elements.appendChild(span2)
-                 movieCard.appendChild(elements);
             });
         } else {
             document.querySelector(".error").textContent = `Movie not found!`;
